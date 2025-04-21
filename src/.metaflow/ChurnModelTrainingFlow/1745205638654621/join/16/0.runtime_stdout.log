@@ -1,0 +1,6 @@
+[MFLOG|0|2025-04-21T03:26:12.663872Z|runtime|96d017e5-063d-460b-b28c-99aee7d9b944]
+[MFLOG|0|2025-04-21T03:26:14.021642Z|runtime|9cabd454-a673-4be1-bf1a-ebeacde59da0]Best Model Results:
+[MFLOG|0|2025-04-21T03:26:14.021759Z|runtime|ee88dd71-6187-4b40-8e6d-fa83778f3eb0]Model Type: gb
+[MFLOG|0|2025-04-21T03:26:14.021789Z|runtime|afb9219b-6cdb-4f03-a3a4-b7cd1e79d76b]Model Parameters: {'n_estimators': 150, 'learning_rate': 0.075, 'max_depth': 5, 'min_samples_leaf': 10}
+[MFLOG|0|2025-04-21T03:26:14.021813Z|runtime|26d81bb6-8ea1-4537-bb43-cfce0e9538ca]Validation Accuracy: 0.9999
+[MFLOG|0|2025-04-21T03:26:14.021839Z|runtime|2eb8bbe5-51dd-4093-88fa-5622dacd9796]Test Accuracy: 0.4946

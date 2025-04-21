@@ -1,0 +1,4 @@
+[MFLOG|0|2025-04-21T03:27:54.595702Z|runtime|4af8d224-0eb5-49e7-8091-d4c462d52d7f]Starting churn prediction flow with model: churn_prediction_model (Production)
+[MFLOG|0|2025-04-21T03:27:54.668567Z|runtime|92714ad0-edd7-4510-9ec8-e6ecd13da866]Error loading model from MLflow registry: cannot access local variable 'mlflow' where it is not associated with a value
+[MFLOG|0|2025-04-21T03:27:54.668655Z|runtime|80f6541b-eed0-4f77-8fd5-62d9a2fa3c07]Trying to load from latest training flow instead...
+[MFLOG|0|2025-04-21T03:27:54.668698Z|runtime|c3134b43-9e2e-482b-88a8-6313c9ec6d33]Retrieved model and scaler from latest training flow

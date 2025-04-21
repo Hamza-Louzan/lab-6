@@ -1,0 +1,3 @@
+[MFLOG|0|2025-04-21T03:21:55.077152Z|runtime|e25ef302-736a-4f20-89ff-8de20b475447]2025/04/20 20:21:55 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
+[MFLOG|0|2025-04-21T03:21:55.304014Z|runtime|2be640a2-1cbd-4917-9d1e-d72a915a1ce6]2025/04/20 20:21:55 INFO mlflow.tracking._tracking_service.client: 🏃 View run righteous-foal-156 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/4209cf50e5c34850a592278fd7067012.
+[MFLOG|0|2025-04-21T03:21:55.822814Z|runtime|4a9925cd-ae0a-4127-8607-21a5d8da539e]2025/04/20 20:21:55 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

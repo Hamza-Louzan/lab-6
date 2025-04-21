@@ -1,0 +1,1 @@
+{"flow_id": "ChurnModelTrainingFlow", "run_number": "1745205638654621", "step_name": "train_and_evaluate", "task_id": "15", "field_name": "metaflow_version", "type": "metaflow_version", "value": "2.15.7", "tags": ["attempt_id:0"], "user_name": "imessouane", "ts_epoch": 1745205647290}

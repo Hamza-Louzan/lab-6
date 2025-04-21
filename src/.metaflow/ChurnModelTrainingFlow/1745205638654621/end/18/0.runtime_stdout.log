@@ -1,0 +1,9 @@
+[MFLOG|0|2025-04-21T03:26:17.898792Z|runtime|267ed41c-f216-417a-8333-afab1f438d8b]
+[MFLOG|0|2025-04-21T03:26:17.901300Z|runtime|2d76fa8a-c9e6-46e9-bbab-160bf7db7086]Churn Model Training Flow Complete!
+[MFLOG|0|2025-04-21T03:26:17.901345Z|runtime|9550c56b-1dd8-4ab2-bf23-d26481f6ff6f]Best Model Type: gb
+[MFLOG|0|2025-04-21T03:26:17.901399Z|runtime|8d3ed27c-95c3-44f6-aa0b-4ae040b69ddc]Best Model Parameters: {'n_estimators': 150, 'learning_rate': 0.075, 'max_depth': 5, 'min_samples_leaf': 10}
+[MFLOG|0|2025-04-21T03:26:17.901475Z|runtime|1c11a41e-6041-4cf9-89f1-a98271b6d101]Train Accuracy: 1.0000
+[MFLOG|0|2025-04-21T03:26:17.901505Z|runtime|41aa6eed-6dae-4bc3-9b61-7c4972426d8e]Validation Accuracy: 0.9999
+[MFLOG|0|2025-04-21T03:26:17.901531Z|runtime|6fcce285-1e80-4b09-9197-2d04ddcc552f]Test Accuracy: 0.4946
+[MFLOG|0|2025-04-21T03:26:17.901556Z|runtime|9012d75b-911c-49a7-9169-12ab602cd818]Model registered as: churn_prediction_model
+[MFLOG|0|2025-04-21T03:26:18.042463Z|runtime|5f01b205-00a4-4ec3-ab19-3abc65058a16]Final MLflow Run ID: 928b25ec830e44f990c1a688e63f41d4

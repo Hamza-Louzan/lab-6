@@ -1,0 +1,5 @@
+[MFLOG|0|2025-04-21T03:22:55.284833Z|runtime|34e4d5a3-a5c1-4e16-9335-ac86b0daaff7]
+[MFLOG|0|2025-04-21T03:22:56.129284Z|runtime|67ae8da4-44bf-4546-83da-1eba869c8b55]Model: K-Nearest Neighbors
+[MFLOG|0|2025-04-21T03:22:56.129380Z|runtime|3166de4a-675e-481b-951f-5f5bb9bf5c6a]Train Accuracy: 0.9934
+[MFLOG|0|2025-04-21T03:22:56.129414Z|runtime|183751bd-1b36-4db9-a1fa-5f9c0004e45b]Validation Accuracy: 0.9875
+[MFLOG|0|2025-04-21T03:22:56.129434Z|runtime|185daf27-aa57-4776-bfe6-7a05a098248d]Test Accuracy: 0.4859

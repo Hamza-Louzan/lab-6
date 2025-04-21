@@ -1,0 +1,1 @@
+{"flow_id": "ChurnModelTrainingFlow", "run_number": "1745205638654621", "step_name": "train_and_evaluate", "task_id": "12", "field_name": "foreach-stack", "type": "foreach-stack", "value": ["model_configs={'learning_rate': 0.1, 'max_de"], "tags": ["attempt_id:0"], "user_name": "imessouane", "ts_epoch": 1745205647219}

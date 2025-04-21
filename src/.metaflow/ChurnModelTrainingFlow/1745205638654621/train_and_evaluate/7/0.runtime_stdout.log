@@ -1,0 +1,5 @@
+[MFLOG|0|2025-04-21T03:21:00.885270Z|runtime|e542a940-440d-4fa3-94f5-25a119ed6938]
+[MFLOG|0|2025-04-21T03:21:02.170705Z|runtime|92b79a3b-8abf-4af6-8e1b-1f20b7c9b94b]Model: Logistic Regression
+[MFLOG|0|2025-04-21T03:21:02.170757Z|runtime|fa3fb081-b4cd-43eb-bd83-73e9d8b53ded]Train Accuracy: 0.9789
+[MFLOG|0|2025-04-21T03:21:02.170794Z|runtime|805b1ea7-7a02-4917-8295-ba1f2297a8eb]Validation Accuracy: 0.9789
+[MFLOG|0|2025-04-21T03:21:02.170822Z|runtime|193ba153-1ea1-4b1c-8d5e-a78aa63451a5]Test Accuracy: 0.4740

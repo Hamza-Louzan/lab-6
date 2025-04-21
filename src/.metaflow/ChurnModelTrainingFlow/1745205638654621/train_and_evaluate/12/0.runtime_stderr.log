@@ -1,0 +1,3 @@
+[MFLOG|0|2025-04-21T03:21:03.121291Z|runtime|8810d5af-3e79-487d-af7d-17acdbf5b8c4]2025/04/20 20:21:03 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
+[MFLOG|0|2025-04-21T03:21:03.455993Z|runtime|fdfdfb43-3d2c-46ac-aa88-aaf47863dc74]2025/04/20 20:21:03 INFO mlflow.tracking._tracking_service.client: 🏃 View run enchanting-bird-78 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/22f3872d14a347c09e5dcdf9fcab3647.
+[MFLOG|0|2025-04-21T03:21:03.456397Z|runtime|3f376fab-9b2c-4c4e-b9a5-5c1eec6e84a5]2025/04/20 20:21:03 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

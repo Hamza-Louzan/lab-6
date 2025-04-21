@@ -1,0 +1,1 @@
+{"flow_id": "ChurnModelTrainingFlow", "run_number": "1745205638654621", "step_name": "train_and_evaluate", "task_id": "14", "field_name": "python_version", "type": "python_version", "value": "3.12.5", "tags": ["attempt_id:0"], "user_name": "imessouane", "ts_epoch": 1745205647334}
