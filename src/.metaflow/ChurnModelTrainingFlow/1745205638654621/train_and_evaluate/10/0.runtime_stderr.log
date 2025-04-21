@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:52.560456Z|runtime|903e620d-df33-4413-9084-131b8c956842]2025/04/20 20:21:52 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:21:52.825502Z|runtime|8fc4b96b-7475-4e4e-a2b3-80d3b01af2b2]2025/04/20 20:21:52 INFO mlflow.tracking._tracking_service.client: 🏃 View run glamorous-colt-649 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/2024e05b0ac54280a2919aa50ebbc7a0.
-[MFLOG|0|2025-04-21T03:21:53.301638Z|runtime|35bf6798-0e6f-4996-9fab-88eb52860c94]2025/04/20 20:21:52 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

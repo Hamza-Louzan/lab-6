@@ -1,5 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:55.300011Z|runtime|86386cff-ae23-4bcb-b102-73f007d4129c]
-[MFLOG|0|2025-04-21T03:21:55.823067Z|runtime|d75d977c-3878-447a-98f9-567e52e0bd81]Model: Random Forest
-[MFLOG|0|2025-04-21T03:21:55.823131Z|runtime|f116c9d6-4cb1-40ef-aae2-1eeade25299c]Train Accuracy: 0.9992
-[MFLOG|0|2025-04-21T03:21:55.823229Z|runtime|3e0ce0aa-97cb-4e47-aab3-6dc4333868c6]Validation Accuracy: 0.9988
-[MFLOG|0|2025-04-21T03:21:55.823365Z|runtime|ad65d21f-4fde-484a-abca-fd8e21659a1b]Test Accuracy: 0.4939

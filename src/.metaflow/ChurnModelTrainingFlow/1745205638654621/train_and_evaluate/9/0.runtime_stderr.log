@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:05.578246Z|runtime|6bb2a4d8-fa1a-48db-b794-2d164e2696e4]2025/04/20 20:21:05 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:21:05.919142Z|runtime|8c0ff241-46a7-4c9e-8cb1-0e39c966e3cb]2025/04/20 20:21:05 INFO mlflow.tracking._tracking_service.client: 🏃 View run amazing-rook-805 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/1f19b561a9a949d6b71ce60481300f71.
-[MFLOG|0|2025-04-21T03:21:05.919318Z|runtime|a9d49413-829f-4934-afb7-1a49a8fd7a67]2025/04/20 20:21:05 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

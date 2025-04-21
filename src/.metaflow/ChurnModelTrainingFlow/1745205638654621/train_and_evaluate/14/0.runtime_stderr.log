@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:22:55.098733Z|runtime|c4f57269-be76-41a7-a3c2-8cca97ae9c7a]2025/04/20 20:22:55 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:22:55.287897Z|runtime|810dc410-a00a-49c0-8579-623a56d059c4]2025/04/20 20:22:55 INFO mlflow.tracking._tracking_service.client: 🏃 View run valuable-lamb-769 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/df202c80c95c41a0be1c89d92cce8927.
-[MFLOG|0|2025-04-21T03:22:55.287988Z|runtime|83792029-82bb-47d4-a3c3-b2c0d313aa3a]2025/04/20 20:22:55 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

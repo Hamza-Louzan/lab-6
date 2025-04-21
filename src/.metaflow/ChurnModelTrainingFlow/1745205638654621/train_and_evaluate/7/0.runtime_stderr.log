@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:00.552059Z|runtime|81042b16-f265-4796-b887-37227b7d05b7]2025/04/20 20:21:00 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:21:00.905926Z|runtime|4750da0b-e4a2-4c94-a049-06bac23d40c4]2025/04/20 20:21:00 INFO mlflow.tracking._tracking_service.client: 🏃 View run orderly-fox-716 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/883e7e49bb4f48aeb46cad6f9e1a6450.
-[MFLOG|0|2025-04-21T03:21:02.170499Z|runtime|579b88d9-7e73-485d-9d7d-bd5386a5fd44]2025/04/20 20:21:00 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

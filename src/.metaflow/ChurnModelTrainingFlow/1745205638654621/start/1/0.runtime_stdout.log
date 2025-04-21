@@ -1,4 +1,0 @@
-[MFLOG|0|2025-04-21T03:20:39.700034Z|runtime|3350aa37-a807-4d0d-b7aa-99a0ac22b996]Starting flow with training data from ../data/customer_churn_dataset-training-master.csv
-[MFLOG|0|2025-04-21T03:20:39.700177Z|runtime|0a3cf618-945e-44ca-93c6-fb9c88cd7591]and testing data from ../data/test_set.csv
-[MFLOG|0|2025-04-21T03:20:42.618890Z|runtime|a67665bf-0ba7-4474-ada3-7656c60777b1]Preprocessing complete. Training data shape: (440832, 11)
-[MFLOG|0|2025-04-21T03:20:42.637263Z|runtime|dbab1193-ad34-49d9-b89f-8b37fd04c8ed]Created 14 model configurations to evaluate

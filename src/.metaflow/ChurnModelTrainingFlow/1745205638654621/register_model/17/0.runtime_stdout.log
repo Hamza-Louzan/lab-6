@@ -1,2 +1,0 @@
-[MFLOG|0|2025-04-21T03:26:16.645635Z|runtime|c1bf5c6f-26ad-4890-91b0-8519119c5c81]Model registered with MLflow as 'churn_prediction_model'
-[MFLOG|0|2025-04-21T03:26:16.846729Z|runtime|7e40e299-0bff-4782-a34e-383a6876051c]MLflow Run ID: 928b25ec830e44f990c1a688e63f41d4

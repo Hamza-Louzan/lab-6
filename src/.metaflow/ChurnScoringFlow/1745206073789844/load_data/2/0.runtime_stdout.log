@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:27:55.576251Z|runtime|484d0436-7102-4fae-a59b-284e651031b0]Loading data from ../data/holdout_set.csv
-[MFLOG|0|2025-04-21T03:27:55.583785Z|runtime|1717cc88-683d-4172-b60a-485ae509ba71]Loaded data with shape: (12875, 12)
-[MFLOG|0|2025-04-21T03:27:55.584308Z|runtime|ea7a7b09-66b6-4c38-a350-0602126d07ba]Found target column 'Churn'. Will evaluate prediction performance.

@@ -1,6 +1,0 @@
-[MFLOG|0|2025-04-21T03:26:16.634323Z|runtime|6a08e674-005f-4f62-b01d-f16a430706c3]Successfully registered model 'churn_prediction_model'.
-[MFLOG|0|2025-04-21T03:26:16.639007Z|runtime|b82c1805-77e0-4d78-b274-044fe540edda]2025/04/20 20:26:16 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: churn_prediction_model, version 1
-[MFLOG|0|2025-04-21T03:26:16.639075Z|runtime|3b6dbee3-fd7f-44be-a384-e2053831d93a]Created version '1' of model 'churn_prediction_model'.
-[MFLOG|0|2025-04-21T03:26:16.644018Z|runtime|d6c92e57-8e11-472d-8ff3-04e7ac42c035]2025/04/20 20:26:16 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:26:16.644066Z|runtime|74c75beb-9547-4483-a135-145437b149e3]2025/04/20 20:26:16 INFO mlflow.tracking._tracking_service.client: 🏃 View run traveling-carp-843 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/928b25ec830e44f990c1a688e63f41d4.
-[MFLOG|0|2025-04-21T03:26:16.846587Z|runtime|b908e869-c081-417e-ba61-882e7e8c5290]2025/04/20 20:26:16 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

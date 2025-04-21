@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:26:10.243104Z|runtime|a695aab0-10b6-4b10-b494-40bcee48a8fe]2025/04/20 20:26:10 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:26:10.501957Z|runtime|599bcc89-f33e-460f-9190-82221560f7ae]2025/04/20 20:26:10 INFO mlflow.tracking._tracking_service.client: 🏃 View run stately-sheep-96 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/59804c993d9f4afea37e4b9a394c3a1b.
-[MFLOG|0|2025-04-21T03:26:10.502003Z|runtime|36b630cb-8675-4f61-83f5-1a4d1ed1d903]2025/04/20 20:26:10 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.
