@@ -1,2 +1,0 @@
-[MFLOG|0|2025-04-21T03:27:58.746222Z|runtime|f85dd6ea-7b18-42ac-9b71-ec6500b2683d]Saving churn predictions to ../data/churn_predictions.csv
-[MFLOG|0|2025-04-21T03:27:58.775082Z|runtime|a6d1d074-32b3-4fcd-9650-33156a599dcb]Saved predictions to ../data/churn_predictions.csv

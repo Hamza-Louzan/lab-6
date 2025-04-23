@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:33.290455Z|runtime|ba778f7e-b68f-4d59-b127-e4227d67c532]2025/04/20 20:21:33 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:21:33.620946Z|runtime|7c186197-bb1a-4f59-b9cc-441c90e4d3cd]2025/04/20 20:21:33 INFO mlflow.tracking._tracking_service.client: 🏃 View run unleashed-hawk-26 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/7ed5b0534c65471292c47f9a264e70d9.
-[MFLOG|0|2025-04-21T03:21:34.315536Z|runtime|94dd01ed-21ef-400b-8a82-bd04d37ad010]2025/04/20 20:21:33 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

@@ -1,3 +1,0 @@
-[MFLOG|0|2025-04-21T03:21:02.999118Z|runtime|cfd6ade8-f81a-430f-af98-5bf9d9b885e6]2025/04/20 20:21:02 WARNING mlflow.models.model: Input example should be provided to infer model signature if the model signature is not provided when logging the model.
-[MFLOG|0|2025-04-21T03:21:03.515381Z|runtime|fad3abc5-a98e-4014-ac19-43f0dcd8d90e]2025/04/20 20:21:03 INFO mlflow.tracking._tracking_service.client: 🏃 View run overjoyed-bat-224 at: http://127.0.0.1:5000/#/experiments/265660061630029052/runs/06c35c708ce54e87a97a8a5e988093c1.
-[MFLOG|0|2025-04-21T03:21:03.515531Z|runtime|56879a1c-e606-43e1-92db-5ca605dd33a6]2025/04/20 20:21:03 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://127.0.0.1:5000/#/experiments/265660061630029052.

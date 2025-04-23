@@ -1,1 +1,0 @@
-{"flow_id": "ChurnScoringFlow", "run_number": "1745206073789844", "step_name": "end", "task_id": "6", "field_name": "ds-root", "type": "ds-root", "value": "/Users/imessouane/Spring/Spring 2/MLops/Labs/Notebooks/Lab6/src/.metaflow", "tags": ["attempt_id:0"], "user_name": "imessouane", "ts_epoch": 1745206079768}

@@ -1,1 +1,0 @@
-{"flow_id": "ChurnModelTrainingFlow", "run_number": "1745205638654621", "step_name": "train_and_evaluate", "task_id": "2", "field_name": "ds-root", "type": "ds-root", "value": "/Users/imessouane/Spring/Spring 2/MLops/Labs/Notebooks/Lab6/src/.metaflow", "tags": ["attempt_id:0"], "user_name": "imessouane", "ts_epoch": 1745205647301}

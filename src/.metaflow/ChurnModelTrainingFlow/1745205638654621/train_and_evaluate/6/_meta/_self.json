@@ -1,1 +1,0 @@
-{"run_number": "1745205638654621", "step_name": "train_and_evaluate", "task_id": "6", "flow_id": "ChurnModelTrainingFlow", "user_name": "imessouane", "tags": [], "system_tags": ["user:imessouane", "python_version:3.12.5", "runtime:dev", "metaflow_version:2.15.7"], "ts_epoch": 1745205643273}
