@@ -1,14 +1,13 @@
-from metaflow import FlowSpec, step, Parameter, Flow
+from metaflow import FlowSpec, step, Parameter, Flow, kubernetes, timeout, retry, catch, conda
 import mlflow
 import os
 import pandas as pd
 import numpy as np
-from sklearn.pipeline import Pipeline
 import pickle
 
-class ChurnScoringFlow(FlowSpec):
+class ChurnScoringFlowGCP(FlowSpec):
     """
-    A flow for scoring using a trained churn prediction model.
+    A flow for scoring using a trained churn prediction model, designed to run on GCP Kubernetes.
     
     This flow:
     1. Loads a registered model from MLflow
@@ -20,27 +19,37 @@ class ChurnScoringFlow(FlowSpec):
     # Define parameters
     model_name = Parameter('model_name',
                           help='Name of the registered model in MLflow',
-                          default='churn_prediction_model')
+                          default='churn_prediction_model_gcp')
     
     model_stage = Parameter('model_stage',
                            help='Stage of the model to use (Production, Staging, etc.)',
                            default='Production')
     
     data_path = Parameter('data_path',
-                         help='Path to the data for prediction',
-                         default='../data/holdout_set.csv')
-    
+                        help='Path to the data for prediction',
+                        default="gs://lab7-hl/data/holdout_set.csv')
+
     output_path = Parameter('output_path',
-                           help='Path to save prediction results',
-                           default='../data/churn_predictions.csv')
+                            help='Path to save prediction results',
+                            default='gs://lab7-hl/data/churn_predictions_gcp.csv')
+
     
+    @kubernetes
+    @timeout(minutes=10)
+    @retry(times=2)
+    @catch(var='load_error')
     @step
     def start(self):
         """
         Start the flow and load the model and scaler
         """
-        print(f"Starting churn prediction flow with model: {self.model_name} ({self.model_stage})")
+        print(f"Starting churn prediction flow on GCP with model: {self.model_name} ({self.model_stage})")
         
+        # Check for errors
+        if hasattr(self, 'load_error') and self.load_error:
+            print(f"Error loading model: {self.load_error}")
+            raise ValueError("Failed to load model")
+            
         # Try to load the registered model from MLflow
         try:
             model_uri = f"models:/{self.model_name}/{self.model_stage}"
@@ -66,7 +75,7 @@ class ChurnScoringFlow(FlowSpec):
             
             # Alternatively, get model and scaler from the latest training flow
             try:
-                latest_train_run = Flow('ChurnModelTrainingFlow').latest_run
+                latest_train_run = Flow('ChurnModelTrainingFlowGCP').latest_run
                 self.model = latest_train_run['register_model'].task.data.best_result['model']
                 self.scaler = latest_train_run['register_model'].task.data.scaler
                 print("Retrieved model and scaler from latest training flow")
@@ -76,6 +85,10 @@ class ChurnScoringFlow(FlowSpec):
         
         self.next(self.load_data)
     
+    @kubernetes
+    @timeout(minutes=5)
+    @retry(times=2)
+    @catch(var='data_error')
     @step
     def load_data(self):
         """
@@ -83,6 +96,11 @@ class ChurnScoringFlow(FlowSpec):
         """
         print(f"Loading data from {self.data_path}")
         
+        # Check for errors
+        if hasattr(self, 'data_error') and self.data_error:
+            print(f"Error loading data: {self.data_error}")
+            raise ValueError("Failed to load data")
+            
         # Load the new data
         try:
             self.raw_data = pd.read_csv(self.data_path)
@@ -103,14 +121,23 @@ class ChurnScoringFlow(FlowSpec):
             print("No target column found. Will only make predictions.")
         
         self.next(self.preprocess_data)
-                
+    
+    @kubernetes
+    @timeout(minutes=10)
+    @retry(times=2)
+    @catch(var='preprocessing_error')
     @step
     def preprocess_data(self):
         """
         Preprocess the new data using the same preprocessing module as training
         """
-        print("Preprocessing new data...")
+        print("Preprocessing new data in Kubernetes...")
         
+        # Check for errors
+        if hasattr(self, 'preprocessing_error') and self.preprocessing_error:
+            print(f"Error preprocessing data: {self.preprocessing_error}")
+            raise ValueError("Failed to preprocess data")
+            
         import preprocessing
         import tempfile
         import os
@@ -129,7 +156,7 @@ class ChurnScoringFlow(FlowSpec):
         
         # First, we need to load the original training data to get the same feature selection
         try:
-            latest_train_run = Flow('ChurnModelTrainingFlow').latest_run
+            latest_train_run = Flow('ChurnModelTrainingFlowGCP').latest_run
             original_train_path = latest_train_run['start'].task.train_path
             print(f"Using original training data path: {original_train_path}")
             
@@ -178,14 +205,22 @@ class ChurnScoringFlow(FlowSpec):
         
         self.next(self.make_predictions)
 
-    
+    @kubernetes
+    @timeout(minutes=5)
+    @retry(times=2)
+    @catch(var='predict_error')
     @step
     def make_predictions(self):
         """
         Make predictions using the model
         """
-        print("Making churn predictions...")
+        print("Making churn predictions on Kubernetes...")
         
+        # Check for errors
+        if hasattr(self, 'predict_error') and self.predict_error:
+            print(f"Error making predictions: {self.predict_error}")
+            raise ValueError("Failed to make predictions")
+            
         # Make predictions
         self.predictions = self.model.predict(self.data)
         
@@ -230,36 +265,41 @@ class ChurnScoringFlow(FlowSpec):
         """
         print(f"Saving churn predictions to {self.output_path}")
         
-        # Create a DataFrame with predictions
         # Start with original data
         results = self.raw_data.copy()
-        
+
         # Add predictions
         results['Predicted_Churn'] = self.predictions
-        
-        # Add probabilities if available
+
+        # If probabilities are available, include them
         if self.probabilities is not None:
-            if self.probabilities.shape[1] >= 2:  # Binary classification
-                results['Churn_Probability'] = self.probabilities[:, 1]  # Probability of class 1 (churn)
+            # Assuming binary classification: add probability of class '1'
+            results['Churn_Probability'] = self.probabilities[:, 1]
         
-        # Ensure output directory exists
-        output_dir = os.path.dirname(self.output_path)
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            
-        # Save to CSV
-        results.to_csv(self.output_path, index=False)
-        self.results = results
-        
-        print(f"Saved predictions to {self.output_path}")
+        # Save results to CSV
+        try:
+            results.to_csv(self.output_path, index=False)
+            print("Predictions saved successfully.")
+        except Exception as e:
+            print(f"Error saving predictions: {e}")
+            raise ValueError("Failed to save prediction results")
+
         self.next(self.end)
+
+    @step
+    def end(self):
+        """
+        End of the flow
+        """
+        print("Churn scoring flow completed successfully.")
+
     
     @step
     def end(self):
         """
         End the flow and print summary
         """
-        print("\nChurn Prediction Flow Complete!")
+        print("\nChurn Prediction Flow Complete on GCP!")
         print(f"Predictions saved to: {self.output_path}")
         
         # Print sample of predictions
@@ -273,4 +313,4 @@ class ChurnScoringFlow(FlowSpec):
                 print(f"  {metric_name}: {metric_value:.4f}")
 
 if __name__ == '__main__':
-    ChurnScoringFlow()
+    ChurnScoringFlowGCP()
