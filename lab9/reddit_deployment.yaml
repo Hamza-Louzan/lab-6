@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reddit-deployment
+spec:
+  replicas: 1 # Start with 1 replica for simplicity
+  selector:
+    matchLabels:
+      app: reddit-app # Matches labels on the Pods
+  template:
+    metadata:
+      labels:
+        app: reddit-app # Label applied to the Pods
+    spec:
+      containers:
+      - name: reddit-container
+        image: us-west1-docker.pkg.dev/iron-wave-458705-r3/lab9/reddit-app:lab8
+        imagePullPolicy: Always # Use local image in Minikube
+        ports:
+        - containerPort: 8000 # Port the app listens on (uvicorn default)
